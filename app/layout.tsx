@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+
 import Link from "next/link";
 
 import { DynamicNav } from "@/components/site/dynamic-nav";
@@ -35,13 +37,23 @@ export default function RootLayout({
 const Nav = () => {
   return (
     <nav className="uppercase sticky top-0 z-50">
-      <section className="border-x font-medium border-t p-3 flex justify-between items-center bg-background">
-        <Link href="/">Blocks.is ◾</Link>
-        <Craft className="flex gap-3 text-sm">
-          <a target="_blank" href="https://github.com/brijr/blocks">
-            GitHub
+      <section className="border-x font-medium border-t flex justify-between items-center bg-background">
+        <Link className="p-3 border-r" href="/">
+          Blocks.is ◾
+        </Link>
+        <Craft className="flex text-sm">
+          <a
+            className="p-3 hover:bg-accent/50 border-x"
+            target="_blank"
+            href="https://github.com/brijr/blocks"
+          >
+            <GitHubLogoIcon width={24} height={24} />
           </a>
-          <a target="_blank" href="https://x.com/bridgertower">
+          <a
+            className="p-3 hover:bg-accent/50"
+            target="_blank"
+            href="https://x.com/bridgertower"
+          >
             Follow for Updates
           </a>
         </Craft>
