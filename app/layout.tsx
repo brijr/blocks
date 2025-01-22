@@ -37,7 +37,7 @@ const Nav = () => {
     <nav className="uppercase sticky top-0 z-50">
       <section className="border-x font-medium border-t p-3 flex justify-between items-center bg-background">
         <Link href="/">Blocks.is ◾</Link>
-        <Craft className="flex gap-3">
+        <Craft className="flex gap-3 text-sm">
           <a target="_blank" href="https://github.com/brijr/blocks">
             GitHub
           </a>
