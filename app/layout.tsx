@@ -5,6 +5,7 @@ import "./globals.css";
 import Link from "next/link";
 
 import { DynamicNav } from "@/components/site/dynamic-nav";
+import { Main } from "@/components/craft";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} antialiased max-w-7xl mx-auto`}>
         <Nav />
-        <main className="border-x border-b">{children}</main>
+        <Main className="border-x border-b">{children}</Main>
       </body>
     </html>
   );
