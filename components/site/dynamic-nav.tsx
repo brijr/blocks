@@ -8,14 +8,6 @@ const pages = [
     name: "Home",
     href: "/",
   },
-  {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
 ];
 
 export const DynamicNav = () => {

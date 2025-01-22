@@ -4,7 +4,7 @@ import "./globals.css";
 
 import Link from "next/link";
 
-import { DynamicNav } from "@/components/dynamic-nav";
+import { DynamicNav } from "@/components/site/dynamic-nav";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} antialiased max-w-7xl mx-auto`}>
         <Nav />
-        {children}
+        <main className="border-x border-b">{children}</main>
       </body>
     </html>
   );
@@ -31,7 +31,7 @@ export default function RootLayout({
 const Nav = () => {
   return (
     <nav className="uppercase">
-      <section className="border-x border-t p-3 flex justify-between items-center bg-accent/30 backdrop-blur-md">
+      <section className="border-x sticky top-0 font-medium border-t p-3 flex justify-between items-center bg-accent/30 backdrop-blur-md">
         <Link href="/">Blocks.is ◾</Link>
         <div className="underline underline-offset-2 flex gap-3">
           <a href="https://github.com/brijr/blocks">GitHub</a>
