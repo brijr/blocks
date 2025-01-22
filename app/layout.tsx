@@ -40,7 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Nav />
-          <main className="border-x border-b">{children}</main>
+          <main className="border-x border-b grid divide-y">{children}</main>
           <Toaster position="top-center" />
         </ThemeProvider>
       </body>
