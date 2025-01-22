@@ -12,7 +12,7 @@ const heroContent = {
   imageHeight: 720,
   button: {
     text: "Lorem ipsum dolor sit amet",
-    link: "https://9d8.dev",
+    link: "#",
   },
 };
 
@@ -20,6 +20,7 @@ const example = {
   name: "Example",
   type: "Hero",
   component: <Example {...heroContent} />,
+  code: "<Example {...heroContent} />",
 };
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         name={example.name}
         type={example.type}
         component={example.component}
+        code={example.code}
       />
     </>
   );
