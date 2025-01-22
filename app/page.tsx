@@ -5,8 +5,10 @@ export default function Home() {
     <>
       <div className="p-3">
         <h1>
-          Collection of Typescript Blocks for building Websites and User
-          Interfaces by <a href="https://bridger.to">Bridger Tower</a>.
+          <Balancer>
+            Collection of Typescript Blocks for building Websites and User
+            Interfaces by <a href="https://bridger.to">Bridger Tower</a>.
+          </Balancer>
         </h1>
       </div>
     </>
