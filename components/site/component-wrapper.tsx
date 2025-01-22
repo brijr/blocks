@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { CodeIcon, CopyIcon, EyeOpenIcon } from "@radix-ui/react-icons";
+import { toast } from "sonner";
 
 interface ComponentWrapperProps {
   component: React.ReactNode;
@@ -15,22 +17,29 @@ export const ComponentWrapper = ({
 }: ComponentWrapperProps) => {
   const [view, setView] = useState<"preview" | "code">("preview");
 
+  const toggleView = () => {
+    setView(view === "preview" ? "code" : "preview");
+  };
+
   return (
     <div className="h-full flex flex-col relative">
-      <div className="absolute top-2 right-2">
-        <Button
-          size="sm"
-          variant={view === "preview" ? "default" : "ghost"}
-          onClick={() => setView("preview")}
-        >
-          Preview
+      <div className="absolute top-2 right-2 flex gap-1">
+        <Button size="icon" variant="outline" onClick={toggleView}>
+          {view === "preview" ? (
+            <CodeIcon width={24} height={24} />
+          ) : (
+            <EyeOpenIcon width={24} height={24} />
+          )}
         </Button>
         <Button
-          size="sm"
-          variant={view === "code" ? "default" : "ghost"}
-          onClick={() => setView("code")}
+          size="icon"
+          variant="outline"
+          onClick={() => {
+            navigator.clipboard.writeText(code);
+            toast.success("Code copied to clipboard!");
+          }}
         >
-          Code
+          <CopyIcon width={24} height={24} />
         </Button>
       </div>
       <div className="flex-1 overflow-auto">

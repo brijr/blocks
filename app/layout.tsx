@@ -8,6 +8,7 @@ import Link from "next/link";
 
 import { DynamicNav } from "@/components/site/dynamic-nav";
 import { Craft } from "@/components/craft";
+import { Toaster } from "sonner";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
       >
         <Nav />
         <main className="border-x border-b">{children}</main>
+        <Toaster position="top-center" />
       </body>
     </html>
   );
