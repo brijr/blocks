@@ -9,6 +9,8 @@ import Link from "next/link";
 import { DynamicNav } from "@/components/site/dynamic-nav";
 import { Craft } from "@/components/craft";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "@/components/site/theme-provider";
+import { ThemeToggle } from "@/components/site/theme-toggle";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -28,9 +30,16 @@ export default function RootLayout({
       <body
         className={`${font.className} antialiased max-w-7xl mx-auto xl:py-3`}
       >
-        <Nav />
-        <main className="border-x border-b">{children}</main>
-        <Toaster position="top-center" />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Nav />
+          <main className="border-x border-b">{children}</main>
+          <Toaster position="top-center" />
+        </ThemeProvider>
       </body>
     </html>
   );
@@ -40,12 +49,19 @@ const Nav = () => {
   return (
     <nav className="uppercase sticky top-0 z-50">
       <section className="border-x font-medium border-t flex justify-between items-center bg-background">
-        <Link className="p-3 border-r" href="/">
+        <Link className="py-2 px-3 border-r" href="/">
           Blocks.is ◾
         </Link>
-        <Craft className="flex text-sm">
+        <Craft className="flex h-full border-l text-sm divide-x">
           <a
-            className="p-3 hover:bg-accent/50 border-x"
+            className="p-3 hover:bg-accent/50"
+            target="_blank"
+            href="https://github.com/brijr/blocks"
+          >
+            <ThemeToggle />
+          </a>
+          <a
+            className="p-3 hover:bg-accent/50"
             target="_blank"
             href="https://github.com/brijr/blocks"
           >
