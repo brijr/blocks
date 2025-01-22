@@ -1,3 +1,9 @@
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable";
+
 export const BlockWrapper = ({
   component,
   name,
@@ -8,12 +14,15 @@ export const BlockWrapper = ({
   type: string;
 }) => {
   return (
-    <div className="grid grid-cols-[1fr_4fr]">
-      <div className="p-3 border-r bg-accent/30">
-        <h3>{name}</h3>
-        <p className="text-muted-foreground">{type}</p>
-      </div>
-      <div>{component}</div>
-    </div>
+    <ResizablePanelGroup direction="horizontal">
+      <ResizablePanel defaultSize={20}>
+        <div className="p-3 h-full bg-accent/30">
+          <h3>{name}</h3>
+          <p className="text-muted-foreground">{type}</p>
+        </div>
+      </ResizablePanel>
+      <ResizableHandle withHandle />
+      <ResizablePanel defaultSize={80}>{component}</ResizablePanel>
+    </ResizablePanelGroup>
   );
 };
