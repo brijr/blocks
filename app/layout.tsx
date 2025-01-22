@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="no-scrollbar">
       <body
         className={`${font.className} antialiased max-w-7xl mx-auto xl:py-3`}
       >
