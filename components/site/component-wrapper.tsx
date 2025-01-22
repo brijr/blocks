@@ -16,8 +16,8 @@ export const ComponentWrapper = ({
   const [view, setView] = useState<"preview" | "code">("preview");
 
   return (
-    <div className="h-full flex flex-col">
-      <div className="border-b p-2 flex gap-2">
+    <div className="h-full flex flex-col relative">
+      <div className="absolute top-2 right-2">
         <Button
           size="sm"
           variant={view === "preview" ? "default" : "ghost"}

@@ -19,7 +19,7 @@ export const BlockWrapper = ({
   code,
 }: BlockWrapperProps) => {
   return (
-    <ResizablePanelGroup direction="horizontal">
+    <ResizablePanelGroup direction="horizontal" className="max-h-[720px]">
       <ResizablePanel defaultSize={20} minSize={15}>
         <div className="p-3 h-full bg-accent/30">
           <h3>{name}</h3>
