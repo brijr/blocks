@@ -7,7 +7,6 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 import { DynamicNav } from "@/components/site/dynamic-nav";
-import { Craft } from "@/components/craft";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/site/theme-provider";
 import { ThemeToggle } from "@/components/site/theme-toggle";
@@ -27,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-scrollbar">
-      <body
-        className={`${font.className} antialiased max-w-7xl mx-auto xl:py-3`}
-      >
+      <body className={`${font.className} antialiased max-w-7xl mx-auto`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
