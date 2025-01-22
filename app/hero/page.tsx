@@ -1,7 +1,7 @@
 import { BlockWrapper } from "@/components/site/block-wrapper";
 
 // Blocks
-import { Example } from "@/components/blocks/example";
+import { Example } from "@/components/blocks/heros/example";
 
 const heroContent = {
   title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
