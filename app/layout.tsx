@@ -49,7 +49,7 @@ const Nav = () => {
             target="_blank"
             href="https://github.com/brijr/blocks"
           >
-            <GitHubLogoIcon width={24} height={24} />
+            <GitHubLogoIcon width={20} height={20} />
           </a>
           <a
             className="p-3 hover:bg-accent/50"

@@ -37,7 +37,7 @@ const CodePreview = ({ code, language }: CodePreviewProps) => {
   return (
     <Highlight theme={theme} code={code} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={cn("overflow-auto p-4 pt-10", className)} style={style}>
+        <pre className={cn("overflow-auto p-3", className)} style={style}>
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line })} className="table-row">
               <span className="table-cell text-right pr-4 min-w-[2.5rem] select-none text-zinc-500">
