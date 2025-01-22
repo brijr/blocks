@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
@@ -25,8 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="no-scrollbar">
-      <body className={`${font.className} antialiased max-w-7xl mx-auto`}>
+    <html suppressHydrationWarning lang="en">
+      <body
+        className={cn(
+          font.className,
+          "antialiased max-w-7xl mx-auto no-scrollbar"
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
