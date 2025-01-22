@@ -2,11 +2,16 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const pages = [
   {
     name: "Home",
     href: "/",
+  },
+  {
+    name: "Heros",
+    href: "/hero",
   },
 ];
 
@@ -21,11 +26,12 @@ export const DynamicNav = () => {
             const isActive = pathname === page.href;
             return (
               <Link
-                className={`p-3 text-sm transition-colors ${
+                className={cn(
+                  "p-3 text-sm transition-colors",
                   isActive
                     ? "bg-accent font-medium cursor-default"
                     : "hover:bg-accent/50"
-                }`}
+                )}
                 key={page.href}
                 href={page.href}
               >
