@@ -13,7 +13,7 @@ type HeroProps = {
   };
 };
 
-export const Example = (props: HeroProps) => {
+export const HeroOne = (props: HeroProps) => {
   return (
     <Section>
       <Container className="space-y-6 md:space-y-12">
