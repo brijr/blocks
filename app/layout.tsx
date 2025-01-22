@@ -5,7 +5,7 @@ import "./globals.css";
 import Link from "next/link";
 
 import { DynamicNav } from "@/components/site/dynamic-nav";
-import { Main } from "@/components/craft";
+import { Craft, Main, Prose } from "@/components/craft";
 
 const font = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} antialiased max-w-7xl mx-auto`}>
         <Nav />
-        <Main className="border-x border-b">{children}</Main>
+        <main className="border-x border-b">{children}</main>
       </body>
     </html>
   );
@@ -31,13 +31,17 @@ export default function RootLayout({
 
 const Nav = () => {
   return (
-    <nav className="uppercase">
-      <section className="border-x sticky top-0 font-medium border-t p-3 flex justify-between items-center bg-accent/30 backdrop-blur-md">
+    <nav className="uppercase sticky top-0 z-50">
+      <section className="border-x font-medium border-t p-3 flex justify-between items-center bg-background">
         <Link href="/">Blocks.is ◾</Link>
-        <div className="underline underline-offset-2 flex gap-3">
-          <a href="https://github.com/brijr/blocks">GitHub</a>
-          <a href="https://x.com/bridgertower">Follow for Updates</a>
-        </div>
+        <Craft className="flex gap-3">
+          <a target="_blank" href="https://github.com/brijr/blocks">
+            GitHub
+          </a>
+          <a target="_blank" href="https://x.com/bridgertower">
+            Follow for Updates
+          </a>
+        </Craft>
       </section>
       <DynamicNav />
     </nav>

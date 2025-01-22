@@ -182,7 +182,7 @@ const styles = {
     spacing: "[&>*+*]:mt-6",
     article: "max-w-prose",
     container: "max-w-5xl mx-auto p-6 sm:p-8",
-    section: "py-8 md:py-12",
+    section: "py-3 md:py-6",
   },
 };
 
@@ -218,6 +218,12 @@ export const Main = ({ children, className, id, style }: BaseProps) => (
   <main className={cn(baseTypographyStyles, className)} id={id} style={style}>
     {children}
   </main>
+);
+
+export const Craft = ({ children, className, id, style }: BaseProps) => (
+  <div className={cn(baseTypographyStyles, className)} id={id} style={style}>
+    {children}
+  </div>
 );
 
 export const Section = ({ children, className, id, style }: BaseProps) => (
