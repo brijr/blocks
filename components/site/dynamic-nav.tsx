@@ -11,7 +11,7 @@ const pages = [
   },
   {
     name: "Heros",
-    href: "/hero",
+    href: "/heros",
   },
 ];
 

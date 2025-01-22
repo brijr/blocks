@@ -1,7 +1,5 @@
 import { BlockWrapper } from "@/components/site/block-wrapper";
-
-// Blocks
-import { Example } from "@/components/blocks/heros/example";
+import { heroComponents } from "@/lib/registry";
 
 const heroContent = {
   title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -16,22 +14,18 @@ const heroContent = {
   },
 };
 
-const example = {
-  name: "Example",
-  type: "Hero",
-  component: <Example {...heroContent} />,
-  code: "<Example {...heroContent} />",
-};
-
 export default function Home() {
   return (
     <>
-      <BlockWrapper
-        name={example.name}
-        type={example.type}
-        component={example.component}
-        code={example.code}
-      />
+      {heroComponents.map((component) => (
+        <BlockWrapper
+          key={component.name}
+          name={component.name}
+          type={component.type}
+          component={<component.component {...heroContent} />}
+          code={component.code}
+        />
+      ))}
     </>
   );
 }
