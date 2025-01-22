@@ -52,7 +52,7 @@ const Nav = () => {
         <Link className="py-2 px-3 border-r" href="/">
           Blocks.is ◾
         </Link>
-        <Craft className="flex h-full border-l text-sm divide-x">
+        <div className="flex h-full border-l text-sm divide-x">
           <a
             className="p-3 hover:bg-accent/50"
             target="_blank"
@@ -74,7 +74,7 @@ const Nav = () => {
           >
             Follow for Updates
           </a>
-        </Craft>
+        </div>
       </section>
       <DynamicNav />
     </nav>
