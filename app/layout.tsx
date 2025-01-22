@@ -52,7 +52,7 @@ const Nav = () => {
   return (
     <nav className="uppercase sticky top-0 z-50">
       <section className="border-x font-medium border-t flex justify-between items-center bg-background">
-        <Link className="py-2 px-3 border-r" href="/">
+        <Link className="py-2 px-3" href="/">
           Blocks.is ◾
         </Link>
         <div className="flex h-full border-l text-sm divide-x">
