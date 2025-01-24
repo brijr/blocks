@@ -20,7 +20,7 @@ export const BlockWrapper = ({
 }: BlockWrapperProps) => {
   return (
     <ResizablePanelGroup direction="horizontal" className="max-h-[720px]">
-      <ResizablePanel defaultSize={20} minSize={15}>
+      <ResizablePanel defaultSize={20} minSize={20}>
         <div className="p-3 h-full bg-accent/30">
           <h3>{name}</h3>
           <p className="text-muted-foreground">{type}</p>
