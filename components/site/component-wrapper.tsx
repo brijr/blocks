@@ -122,7 +122,7 @@ export const ComponentWrapper = ({
       <div className="flex-1 overflow-auto no-scrollbar">
         <div
           className={cn(
-            "h-full w-full",
+            "h-full w-full overflow-hidden",
             view === "preview" ? "block" : "hidden"
           )}
         >
