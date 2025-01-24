@@ -51,7 +51,7 @@ export default function RootLayout({
 const Nav = () => {
   return (
     <nav className="uppercase sticky top-0 z-50">
-      <section className="border-x font-medium border-t flex justify-between items-center bg-background">
+      <section className="border-x font-medium border-t sm:mt-6 flex justify-between items-center bg-background">
         <Link className="py-2 px-3" href="/">
           Blocks.is ◾
         </Link>
